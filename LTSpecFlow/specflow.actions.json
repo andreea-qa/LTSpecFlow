@@ -1,0 +1,9 @@
+{
+  "selenium": {
+    "defaultTimeout": 60,
+    "pollingInterval": 5,
+    "lambdatest": {
+        "url": "https://andreea.draniceanu:KBMM5m1sIGxyIxVpwLDz8vqovL58woKeuqdjHeiq8oQoQjWvAg@hub.lambdatest.com/wd/hub"
+      }
+    }
+  }
