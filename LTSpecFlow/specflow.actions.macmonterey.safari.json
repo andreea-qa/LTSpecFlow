@@ -1,0 +1,12 @@
+{
+  "selenium": {
+    "browser": "Safari",
+    "capabilities": {
+      "platform": "MacOS Monterey",
+      "version": "latest",
+      "build": "[Demo - 2] SpecFlow Actions on LambdaTest",
+      "project": "SpecFlow Actions Demo",
+      "selenium_version": "4.1.2"
+    }
+  }
+}
