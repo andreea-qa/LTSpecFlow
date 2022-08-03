@@ -3,7 +3,7 @@
     "defaultTimeout": 60,
     "pollingInterval": 5,
     "lambdatest": {
-        "url": "https://user_name:access_key@hub.lambdatest.com/wd/hub"
-      }
+      "url": "https://${LT_USERNAME}:${LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub"
+    }
     }
   }
