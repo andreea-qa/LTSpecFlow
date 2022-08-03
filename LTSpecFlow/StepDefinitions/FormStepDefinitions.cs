@@ -3,6 +3,9 @@ using NUnit.Framework;
 using TechTalk.SpecFlow;
 using SpecFlow.Actions.Selenium;
 
+[assembly: Parallelizable(ParallelScope.Fixtures)]
+[assembly: LevelOfParallelism(4)]
+
 namespace LTSpecFlow.StepDefinitions
 {
     [Binding]
