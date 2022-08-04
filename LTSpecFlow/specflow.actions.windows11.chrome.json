@@ -6,7 +6,7 @@
       "version": "latest-4",
       "build": "[Demo - 1] SpecFlow Actions on LambdaTest",
       "project": "SpecFlow Actions Demo",
-      "selenium_version":  "4.1.2"
+      "selenium_version":  "3.141.59"
     }
   }
 }
