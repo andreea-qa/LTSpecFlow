@@ -1,8 +1,15 @@
-Feature: Playground Demo
+Feature: ECommerce Playground Demo
 
-@threeInputFields
-Scenario: Add three valid integer numbers
-        Given I navigate to the LambdaTest Form Demo page
-        When I input the values 5 and 6
-        And I press to get the values
-        Then the result should be 11
+@addItemsToCart
+Scenario: Add laptop to cart
+	Given I navigate to Laptops
+	When I select the first product
+	And I add it to the cart
+	Then the total price should be $146.00
+
+@addItemsToCart
+Scenario: Add software to cart
+	Given I navigate to Software
+	When I select the first product
+	And I add it to the cart
+	Then the total price should be $337.99

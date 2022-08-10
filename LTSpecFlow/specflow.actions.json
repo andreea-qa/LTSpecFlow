@@ -5,5 +5,5 @@
     "lambdatest": {
       "url": "https://${LT_USERNAME}:${LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub"
     }
-    }
   }
+}
