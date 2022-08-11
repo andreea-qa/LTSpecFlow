@@ -1,15 +1,13 @@
 Feature: ECommerce Playground Demo
 
-@addItemsToCart
-Scenario: Add laptop to cart
-	Given I navigate to Laptops
-	When I select the first product
-	And I add it to the cart
-	Then the total price should be $146.00
+@searchItems
+Scenario: Search for iPod Nano
+	Given I select the Software category
+	When I search for iPod Nano
+	Then I should get 4 results
 
-@addItemsToCart
-Scenario: Add software to cart
-	Given I navigate to Software
-	When I select the first product
-	And I add it to the cart
-	Then the total price should be $337.99
+@searchItems
+Scenario: Search for HTC Touch HD
+	Given I select the Tablets category
+	When I search for HTC Touch HD
+	Then I should get 8 results
