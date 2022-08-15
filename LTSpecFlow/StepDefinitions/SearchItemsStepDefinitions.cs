@@ -8,10 +8,10 @@ using TechTalk.SpecFlow;
 namespace LTSpecFlow.StepDefinitions
 {
     [Binding]
-    public class AddItemsToCartStepDefinitions
+    public class SearchItemsStepDefinitions
     {
         private readonly IBrowserInteractions _browserInteractions;
-        public AddItemsToCartStepDefinitions(IBrowserInteractions browserInteractions)
+        public SearchItemsStepDefinitions(IBrowserInteractions browserInteractions)
         {
             _browserInteractions = browserInteractions;
         }
@@ -39,7 +39,7 @@ namespace LTSpecFlow.StepDefinitions
         [Then(@"I should get (.*) results")]
         public void ThenIShouldGetResults(int itemsCount)
         {
-            int actualCount = _browserInteractions.WaitAndReturnElements(By.XPath("//div[@class='carousel-item active']")).Count();
+            int actualCount = _browserInteractions.WaitAndReturnElements(By.XPath("//div[@class='row']//div[@class='carousel-item active']/img[@alt='HTC Touch HD']")).Count();
             Assert.AreEqual(itemsCount, actualCount);
         }
 
