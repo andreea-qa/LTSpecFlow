@@ -3,6 +3,8 @@ using OpenQA.Selenium;
 using SpecFlow.Actions.Selenium;
 using TechTalk.SpecFlow;
 
+[assembly: Parallelizable(ParallelScope.Fixtures)]
+[assembly: LevelOfParallelism(4)]
 namespace LTSpecFlow.StepDefinitions
 {
     [Binding]
@@ -23,15 +25,15 @@ namespace LTSpecFlow.StepDefinitions
         [Given(@"I select the (.*) category")]
         public void GivenISelectTheCategory(string category)
         {
-            _browserInteractions.WaitAndReturnElement(By.XPath("(//div[@class='dropdown search-category']/button[@type='button'])[1]")).ClickWithRetry();
-            _browserInteractions.WaitAndReturnElement(By.XPath($"(//a[text()='{category}'])[1]")).ClickWithRetry();
+            _browserInteractions.WaitAndReturnElement(By.XPath("(//div[@class='dropdown search-category']/button[@type='button'])[1]")).Click();
+            _browserInteractions.WaitAndReturnElement(By.XPath($"(//a[text()='{category}'])[1]")).Click();
         }
 
         [When(@"I search for (.*)")]
         public void WhenISearchForProduct(string product)
         {
-            _browserInteractions.WaitAndReturnElement(By.XPath("(//input[@name='search'])[1]")).SendKeysWithClear(product);
-            _browserInteractions.WaitAndReturnElement(By.XPath("(//button[normalize-space()='Search'])[1]")).ClickWithRetry();
+            _browserInteractions.WaitAndReturnElement(By.XPath("(//input[@name='search'])[1]")).SendKeys(product);
+            _browserInteractions.WaitAndReturnElement(By.XPath("(//button[normalize-space()='Search'])[1]")).Click();
         }
 
         [Then(@"I should get (.*) results")]
