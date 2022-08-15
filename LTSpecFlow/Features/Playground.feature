@@ -1,8 +1,13 @@
-Feature: Playground Demo
+Feature: ECommerce Playground Demo
 
-@threeInputFields
-Scenario: Add three valid integer numbers
-        Given I navigate to the LambdaTest Form Demo page
-        When I input the values 5 and 6
-        And I press to get the values
-        Then the result should be 11
+@searchItems
+Scenario: Search for iPod Nano
+	Given I select the Software category
+	When I search for iPod Nano
+	Then I should get 4 results
+
+@searchItems
+Scenario: Search for HTC Touch HD
+	Given I select the Tablets category
+	When I search for HTC Touch HD
+	Then I should get 8 results

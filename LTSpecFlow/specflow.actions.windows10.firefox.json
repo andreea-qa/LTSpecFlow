@@ -1,8 +1,8 @@
 {
   "selenium": {
-    "browser": "Safari",
+    "browser": "Firefox",
     "capabilities": {
-      "platform": "MacOS Monterey",
+      "platform": "Windows 10",
       "version": "latest",
       "build": "[Demo - 2] SpecFlow Actions on LambdaTest",
       "project": "SpecFlow Actions Demo",
